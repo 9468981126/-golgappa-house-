@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golgappa House</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8ec;
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff7b00, #ffae42);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        nav {
+            background: #ff8c1a;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            background-image: url('https://i.imgur.com/8r8V0Y7.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px #000;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #ff7b00;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .item {
+            background: white;
+            width: 260px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .item h3 {
+            margin: 15px 0 5px;
+            color: #ff7b00;
+        }
+
+        footer {
+            background: #ff7b00;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #ff7b00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background: #e56d00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Golgappa House</h1>
+    <p>The Tastiest Pani Puri in Town!</p>
+</header>
+
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    Delicious • Crispy • Spicy • Fresh
+</div>
+
+<section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+
+        <!-- ITEM 1 -->
+        <div class="item">
+            <img src="/mnt/data/images (2).jpeg" alt="Classic Golgappa">
+            <h3>Classic Golgappa</h3>
+            <p>₹40 / plate</p>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="item">
+            <img src="/mnt/data/download.jpeg" alt="Meetha Pani Golgappa">
+            <h3>Meetha Pani Golgappa</h3>
+            <p>₹50 / plate</p>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="item">
+            <img src="/mnt/data/images (1).jpeg" alt="Teekha Masala Golgappa">
+            <h3>Teekha Masala Golgappa</h3>
+            <p>₹60 / plate</p>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="item">
+            <img src="/mnt/data/images.jpeg" alt="Dry Fruit Special">
+            <h3>Dry Fruit Special</h3>
+            <p>₹90 / plate</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We serve fresh, crispy and hygienic Golgappas prepared with homemade spices and purified water. Taste the true magic of street food!</p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact / Order Now</h2>
+    <p>📍 Location: sirsod khurdh baran raj. 325217</p>
+    <p>📞 Phone: 9079319559</p>
+
+    <h3>Place Your Order</h3>
+    <form action="https://wa.me/919079319559" method="get" target="_blank" style="max-width:400px; margin:auto; text-align:left; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.15);" onsubmit="return sendToWhatsApp();">
+        <label>Customer Name:</label>
+        <input id="custname" type="text" required style="width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;">
+
+        <label>Address:</label>
+        <input id="custaddress" type="text" required style="width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;">
+
+        <label>Mobile Number:</label>
+        <input id="custmobile" type="text" required style="width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;">
+
+        <label>Select Item:</label>
+        <select id="custitem" style="width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;">
+            <option>Classic Golgappa - ₹40</option>
+            <option>Meetha Pani Golgappa - ₹50</option>
+            <option>Teekha Masala Golgappa - ₹60</option>
+            <option>Dry Fruit Special - ₹90</option>
+        </select>
+
+        <label>Quantity (plates):</label>
+        <input id="custqty" type="number" min="1" required style="width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;">
+
+        <button type="submit" style="width:100%; margin-top:10px;">Send Order on WhatsApp</button>
+    </form>
+
+    <script>
+        function sendToWhatsApp() {
+            let name = document.getElementById('custname').value;
+            let address = document.getElementById('custaddress').value;
+            let mobile = document.getElementById('custmobile').value;
+            let item = document.getElementById('custitem').value;
+            let qty = document.getElementById('custqty').value;
+
+            let message = `New Order:%0A%0A👤 Name: ${name}%0A🏠 Address: ${address}%0A📞 Mobile: ${mobile}%0A🍽 Item: ${item}%0A🔢 Quantity: ${qty}`;
+
+            let url = `https://wa.me/919079319559?text=${message}`;
+            window.open(url, '_blank');
+            return false;
+        }
+    </script>
+</section>
+
+<footer>
+    © 2025 Golgappa House | All Rights Reserved
+</footer>
+
+</body>
+</html>
